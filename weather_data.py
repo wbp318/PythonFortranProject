@@ -1,7 +1,10 @@
+import os
+from dotenv import load_dotenv
 import requests
 import os
 
-API_KEY = "58cef9659cdf58d5e41f169d59e058dd"  # Replace with your OpenWeatherMap API key
+load_dotenv()
+API_KEY = os.getenv("API_KEY")
 BASE_URL = "http://api.openweathermap.org/data/2.5/forecast"
 
 def get_weather_data(city):
